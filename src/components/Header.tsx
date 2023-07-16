@@ -1,10 +1,14 @@
 import { Navbar, Container } from 'components';
 
-export const Header = () => {
+type Props = {
+  navbarVariant?: 'default' | 'complicated';
+};
+
+export const Header = ({ navbarVariant = 'default' }: Props) => {
   return (
     <header className="header min-h-[72px] md:min-h-[100px] flex flex-col justify-center">
       <Container>
-        <Navbar variant="complicated" />
+        <Navbar variant={navbarVariant} />
       </Container>
     </header>
   );

@@ -17,7 +17,7 @@ export const Drawer = ({
   isOpen = false,
 }: Props) => {
   return (
-    <div>
+    <>
       <div
         className={mergeClsx(
           'w-3/4 fixed top-0 -right-3/4 z-40 h-screen p-4 bg-white transition-position duration-500 ease-in-out',
@@ -35,6 +35,6 @@ export const Drawer = ({
         )}
         onClick={onOverlay}
       />
-    </div>
+    </>
   );
 };

@@ -47,7 +47,7 @@ export const Navbar = ({ variant = 'default' }: Props) => {
 
       {isMainMenu && <MainMenu className="hidden md:flex mr-2" />}
 
-      <div className="ml-auto hidden md:flex items-center gap-4 lg:gap-10 text-sm font-semibold">
+      <div className="ml-auto hidden md:flex items-center gap-4 lg:gap-10">
         {isLocation && (
           <LocationButton
             href="https://www.starbucks.com/store-locator?map=39.635307,-101.337891,5z"

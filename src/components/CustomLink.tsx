@@ -6,6 +6,7 @@ import { mergeClsx } from 'utils/helpers';
 const linkVariants = {
   default: 'font-semibold hover:text-green-700',
   navLink: 'font-bold uppercase hover:text-green-700',
+  sidebarLink: 'font-normal',
   btnLight:
     'font-semibold border border-black rounded-3xl px-4 py-2 hover:bg-gray-300',
   btnDark:
@@ -16,12 +17,16 @@ const fontSizes = {
   small: 'text-sm',
   medium: 'text-base',
   large: 'text-lg',
+  xlarge: 'text-xl',
 };
+
+export type CustomLinkVariant = keyof typeof linkVariants;
+export type CustomLinkSize = keyof typeof fontSizes;
 
 type Props = ComponentPropsWithoutRef<'a'> &
   Partial<{
-    variant: keyof typeof linkVariants;
-    size: keyof typeof fontSizes;
+    variant: CustomLinkVariant;
+    size: CustomLinkSize;
     isExternal: boolean;
     iconLeft: ReactNode;
     iconRight: ReactNode;

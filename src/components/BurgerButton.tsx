@@ -1,3 +1,5 @@
+'use client';
+
 import { ComponentPropsWithoutRef } from 'react';
 import clsx from 'clsx';
 import { mergeClsx } from 'utils/helpers';
@@ -18,13 +20,13 @@ export const BurgerButton = ({
 }: Props) => {
   return (
     <button
+      {...props}
       type="button"
       className={mergeClsx(
         'text-gray-500 w-[36px] h-[36px] relative focus:outline-none rounded-full hover:bg-gray-100',
         className
       )}
       onClick={toggleMenu}
-      {...props}
     >
       <span className="sr-only">Open main menu</span>
       <div className="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">

@@ -1,5 +1,9 @@
 import { mergeClsx } from 'utils/helpers';
-import { CustomLink as NavLink } from 'components';
+import {
+  CustomLink as NavLink,
+  CustomLinkSize,
+  CustomLinkVariant,
+} from 'components';
 
 const menuList = [
   {
@@ -12,15 +16,21 @@ const menuList = [
   },
   {
     url: 'https://www.starbucks.com/gift',
-    label: 'Gift cards',
+    label: 'Gift Cards',
   },
 ];
 
-type Props = {
-  className?: string;
-};
+type Props = Partial<{
+  className: string;
+  linkVariants: CustomLinkVariant;
+  linkSize: CustomLinkSize;
+}>;
 
-export const MainMenu = ({ className }: Props) => {
+export const MainMenu = ({
+  className,
+  linkVariants = 'navLink',
+  linkSize = 'small',
+}: Props) => {
   return (
     <ul
       className={mergeClsx(
@@ -32,8 +42,8 @@ export const MainMenu = ({ className }: Props) => {
         <li key={url}>
           <NavLink
             href={url}
-            variant="navLink"
-            size="small"
+            variant={linkVariants}
+            size={linkSize}
             isExternal
             className="whitespace-nowrap"
           >

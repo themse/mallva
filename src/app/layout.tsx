@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { PropsWithChildren } from 'react';
 
 import 'styles/global.scss';
 
@@ -7,14 +8,12 @@ export const metadata: Metadata = {
   description: 'Starbucks Demo',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const RootLayout = ({ children }: PropsWithChildren) => {
   return (
     <html lang="en">
       <body>{children}</body>
     </html>
   );
-}
+};
+
+export default RootLayout;

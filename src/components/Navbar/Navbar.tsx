@@ -1,8 +1,9 @@
 import Link from 'next/link';
 
-import { Icon, BurgerButton, MainMenu } from 'components';
+import { Icon, MainMenu } from 'components';
 import { CustomLink as LocationButton } from 'components/CustomLink';
 import { CustomLink as AuthButton } from 'components/CustomLink';
+import { MobileMenuButton } from './MobileMenuButton';
 
 type VariantRules = {
   isBrand: boolean;
@@ -72,7 +73,7 @@ export const Navbar = ({ variant = 'default' }: Props) => {
         )}
       </div>
 
-      {isNavBody && <BurgerButton className="ml-auto md:hidden" />}
+      {isNavBody && <MobileMenuButton className="ml-auto" />}
     </nav>
   );
 };

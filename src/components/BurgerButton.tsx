@@ -1,18 +1,53 @@
 import { ComponentPropsWithoutRef } from 'react';
+import clsx from 'clsx';
+import { mergeClsx } from 'utils/helpers';
 
-type Props = ComponentPropsWithoutRef<'button'> & {};
-
-const BurgerLine = () => {
-  return <span className="block w-[20px] h-[2px] bg-black opacity-50" />;
+type Props = ComponentPropsWithoutRef<'button'> & {
+  isOpen: boolean;
+  toggleMenu: () => void;
 };
 
-export const BurgerButton = ({ className, ...props }: Props) => {
+const burgerLineStyle =
+  'block absolute w-[20px] h-[2px] bg-current transform transition duration-500 ease-in-out';
+
+export const BurgerButton = ({
+  className,
+  isOpen,
+  toggleMenu,
+  ...props
+}: Props) => {
   return (
-    <button type="button" className={className} {...props}>
-      <div className="w-[36px] h-[36px] flex flex-col justify-center items-center gap-1 hover:bg-gray-100 rounded-full">
-        {Array.from({ length: 3 }).map((_, index) => (
-          <BurgerLine key={index} />
-        ))}
+    <button
+      type="button"
+      className={mergeClsx(
+        'text-gray-500 w-[36px] h-[36px] relative focus:outline-none rounded-full hover:bg-gray-100',
+        className
+      )}
+      onClick={toggleMenu}
+      {...props}
+    >
+      <span className="sr-only">Open main menu</span>
+      <div className="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <span
+          aria-hidden="true"
+          className={clsx([
+            burgerLineStyle,
+            isOpen && 'rotate-45',
+            !isOpen && '-translate-y-1.5',
+          ])}
+        />
+        <span
+          aria-hidden="true"
+          className={clsx([burgerLineStyle, isOpen && 'opacity-0'])}
+        />
+        <span
+          aria-hidden="true"
+          className={clsx([
+            burgerLineStyle,
+            isOpen && '-rotate-45',
+            !isOpen && ' translate-y-1.5',
+          ])}
+        />
       </div>
     </button>
   );

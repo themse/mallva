@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Icon, MainMenu } from 'components';
 import { CustomLink as LocationButton } from 'components/CustomLink';
 import { CustomLink as AuthButton } from 'components/CustomLink';
-import { MobileMenuButton } from './MobileMenuButton';
+import MobileMenuButton from './MobileMenuButton';
 
 type VariantRules = {
   isBrand: boolean;
@@ -63,7 +63,7 @@ export const Navbar = ({ variant = 'default' }: Props) => {
 
         {isAuthButtonGroup && (
           <div className="flex gap-4 whitespace-nowrap">
-            <AuthButton variant="btnLight" size="small">
+            <AuthButton variant="btnLight" size="small" href="/sign-in">
               Sign in
             </AuthButton>
             <AuthButton variant="btnDark" size="small">

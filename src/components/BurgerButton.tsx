@@ -13,12 +13,7 @@ type Props = ComponentPropsWithoutRef<'button'> & {
 const burgerLineStyle =
   'block absolute w-[20px] h-[2px] bg-current transform transition duration-500 ease-in-out';
 
-export const BurgerButton = ({
-  className,
-  isOpen,
-  toggleMenu,
-  ...props
-}: Props) => {
+const BurgerButton = ({ className, isOpen, toggleMenu, ...props }: Props) => {
   return (
     <button
       {...props}
@@ -55,3 +50,5 @@ export const BurgerButton = ({
     </button>
   );
 };
+
+export default BurgerButton;

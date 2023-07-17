@@ -1,3 +1,9 @@
+// client components
+import FeaturedBanner from './FeaturedBanner';
+import BurgerButton from './BurgerButton';
+
+export { FeaturedBanner, BurgerButton };
+
 export * as Icon from './icons';
 export { Container } from './Container';
 export { CustomLink } from './CustomLink';
@@ -8,10 +14,12 @@ export { Separator } from './Separator';
 export { InfoLinks } from './InfoLinks';
 export { SocialIcons } from './SocialIcons';
 export { TechnicalLinks } from './TechnicalLinks';
-export { FeaturedBanner } from './FeaturedBanner';
 
 export { Navbar, SidebarNav } from './Navbar';
 export { MainMenu } from './MainMenu';
-export { BurgerButton } from './BurgerButton';
 export { Drawer } from './Drawer';
 export { Overlay } from './Overlay';
+
+// Form
+export { TextInput } from './TextInput';
+

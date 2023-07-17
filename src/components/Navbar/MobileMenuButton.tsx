@@ -8,7 +8,7 @@ import { mergeClsx } from 'utils/helpers';
 
 type Props = ComponentPropsWithoutRef<'button'>;
 
-export const MobileMenuButton = ({ className, ...props }: Props) => {
+const MobileMenuButton = ({ className, ...props }: Props) => {
   const { isOpen, toggleSideBar } = useSidebar();
 
   return (
@@ -20,3 +20,5 @@ export const MobileMenuButton = ({ className, ...props }: Props) => {
     />
   );
 };
+
+export default MobileMenuButton;

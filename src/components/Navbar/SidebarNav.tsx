@@ -7,7 +7,7 @@ import { useSidebar } from 'context';
 import { useLockedBody } from 'hooks';
 import { mergeClsx } from 'utils/helpers';
 
-export const SidebarNav = () => {
+const SidebarNav = () => {
   const { isOpen, hideSidebar } = useSidebar();
 
   useLockedBody(isOpen);
@@ -50,3 +50,5 @@ export const SidebarNav = () => {
     </Drawer>
   );
 };
+
+export default SidebarNav;

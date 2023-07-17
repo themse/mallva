@@ -13,7 +13,7 @@ type Props = {
   banner: FeaturedBannerEntity;
 };
 
-export const FeaturedBanner = ({ banner }: Props) => {
+const FeaturedBanner = ({ banner }: Props) => {
   const { title, description, image, bgColor, order, ctaBtnLabel } = banner;
 
   const onCtaClick = () => {
@@ -49,3 +49,5 @@ export const FeaturedBanner = ({ banner }: Props) => {
     </div>
   );
 };
+
+export default FeaturedBanner;

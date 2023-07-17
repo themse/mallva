@@ -10,7 +10,8 @@
     "lint": "next lint",
     "type:check": "tsc --pretty --noEmit",
     "db:migrate": "npx prisma migrate dev --name <migration-name>",
-    "db:deploy": "npx prisma migrate deploy"
+    "db:deploy": "npx prisma migrate deploy",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "5.0.0",

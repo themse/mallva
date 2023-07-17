@@ -8,12 +8,18 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type:check": "tsc --pretty --noEmit"
+    "type:check": "tsc --pretty --noEmit",
+    "db:migrate": "npx prisma migrate dev --name <migration-name>",
+    "db:deploy": "npx prisma migrate deploy"
   },
   "dependencies": {
+    "@prisma/client": "5.0.0",
+    "bcrypt": "^5.1.0",
     "clsx": "^1.2.1",
     "final-form": "^4.20.9",
     "next": "13.4.10",
+    "next-auth": "^4.22.1",
+    "prisma": "^5.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-final-form": "^6.5.9",
@@ -21,6 +27,7 @@
   },
   "devDependencies": {
     "@total-typescript/ts-reset": "^0.4.2",
+    "@types/bcrypt": "^5.0.0",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",

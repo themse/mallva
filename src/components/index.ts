@@ -6,6 +6,8 @@ export { Header } from './Header';
 export { Footer } from './Footer';
 export { Separator } from './Separator';
 export { InfoLinks } from './InfoLinks';
+export { SocialIcons } from './SocialIcons';
+export { TechnicalLinks } from './TechnicalLinks';
 
 export { Navbar, SidebarNav } from './Navbar';
 export { MainMenu } from './MainMenu';

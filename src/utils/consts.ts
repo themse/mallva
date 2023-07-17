@@ -1,3 +1,5 @@
+import { Icon } from 'components';
+
 export const menuList = [
     {
         url: 'https://www.starbucks.com/menu',
@@ -135,4 +137,57 @@ export const infoLinks: { title: string; links: { url: string; label: string; }[
             },
         ]
     },
+];
+
+export const socialLinks = [
+    {
+        url: 'https://open.spotify.com/user/starbucks',
+        label: 'Spotify',
+        Icon: Icon.Spotify,
+    },
+    {
+        url: 'https://facebook.com/starbucks',
+        label: 'Facebook',
+        Icon: Icon.Facebook,
+    },
+    {
+        url: 'https://www.pinterest.com/starbucks/',
+        label: 'Pinterest',
+        Icon: Icon.Pinterest,
+    },
+    {
+        url: 'https://instagram.com/starbucks',
+        label: 'Instagram',
+        Icon: Icon.Instagram,
+    },
+    {
+        url: 'https://www.youtube.com/starbucks',
+        label: 'Youtube',
+        Icon: Icon.Youtube,
+    },
+    {
+        url: 'https://twitter.com/starbucks/',
+        label: 'Twitter',
+        Icon: Icon.Twitter,
+    },
+];
+
+export const technicalLinks: { url: string; label: string }[] = [
+    {
+        url: 'https://www.starbucks.com/terms/privacy-policy/',
+        label: 'Privacy Notice',
+    },
+    {
+        url: 'https://www.starbucks.com/terms/starbucks-terms-of-use/',
+        label: 'Terms of Use',
+    },
+    {
+        url: 'https://www.starbucks.com/personal-information',
+        label: 'Do Not Share My Personal Information',
+    },
+    {
+        url: 'https://globalassets.starbucks.com/assets/A2A072E3411C4A6ABAEB8D6BCF286F43.pdf',
+        label: 'CA Supply Chain Act',
+    },
+
 ];

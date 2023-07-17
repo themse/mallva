@@ -21,5 +21,6 @@ export { Drawer } from './Drawer';
 export { Overlay } from './Overlay';
 
 // Form
+export { SignInForm } from './form';
 export { TextInput } from './TextInput';
-
+export { Asterisk } from './Asterisk';

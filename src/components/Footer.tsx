@@ -1,3 +1,11 @@
+import { InfoLinks, Container } from 'components';
+
 export const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <footer className="footer py-6">
+      <Container>
+        <InfoLinks />
+      </Container>
+    </footer>
+  );
 };

@@ -7,6 +7,7 @@ const linkVariants = {
   default: 'font-semibold hover:text-green-700',
   navLink: 'font-bold uppercase hover:text-green-700',
   sidebarLink: 'font-normal',
+  infoLink: 'text-black/50 hover:text-black',
   btnLight:
     'font-semibold border border-black rounded-3xl px-4 py-2 hover:bg-gray-300',
   btnDark:

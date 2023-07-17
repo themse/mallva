@@ -28,13 +28,15 @@ export const Drawer = ({
       >
         {children}
       </div>
-      <Overlay
-        className={mergeClsx(
-          'z-30 transition-opacity duration-300 ease-in-out opacity-0',
-          isOpen && 'opacity-1'
-        )}
-        onClick={onOverlay}
-      />
+      {isOpen && (
+        <Overlay
+          className={mergeClsx(
+            'z-30 transition-opacity duration-300 ease-in-out opacity-0',
+            isOpen && 'opacity-1'
+          )}
+          onClick={onOverlay}
+        />
+      )}
     </>
   );
 };

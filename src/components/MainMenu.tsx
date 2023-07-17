@@ -4,21 +4,7 @@ import {
   CustomLinkSize,
   CustomLinkVariant,
 } from 'components';
-
-const menuList = [
-  {
-    url: 'https://www.starbucks.com/menu',
-    label: 'Menu',
-  },
-  {
-    url: 'https://www.starbucks.com/rewards',
-    label: 'Rewards',
-  },
-  {
-    url: 'https://www.starbucks.com/gift',
-    label: 'Gift Cards',
-  },
-];
+import { menuList } from 'utils/consts';
 
 type Props = Partial<{
   className: string;

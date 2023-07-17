@@ -23,11 +23,11 @@ const SignInForm = () => {
   const getValidationRules = async ({ email, password }: FormValues) => {
     const schema = Yup.object().shape({
       email: Yup.string()
-        .email('Invalid email format')
-        .required('Email is required'),
+        .required('Email is required')
+        .email('Invalid email format'),
       password: Yup.string()
-        .min(8, 'Password must be at least 8 characters long')
-        .required('Password is required'),
+        .required('Password is required')
+        .min(8, 'Password must be at least 8 characters long'),
     });
 
     try {
@@ -40,7 +40,7 @@ const SignInForm = () => {
         acc[err.path] = err.message;
 
         return acc;
-      });
+      }, {});
     }
   };
 
@@ -49,7 +49,7 @@ const SignInForm = () => {
       <Form<FormValues>
         onSubmit={onSubmit}
         validate={getValidationRules}
-        render={({ handleSubmit, submitting, hasValidationErrors }) => (
+        render={({ handleSubmit }) => (
           <form onSubmit={handleSubmit}>
             <div className="flex flex-col gap-8">
               <span>
@@ -84,7 +84,6 @@ const SignInForm = () => {
                 <button
                   type="submit"
                   className="block bg-green-900 rounded-full text-white text-lg px-6 py-5 hover:bg-opacity-90"
-                  disabled={submitting || hasValidationErrors}
                 >
                   Sign in
                 </button>

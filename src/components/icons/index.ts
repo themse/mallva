@@ -6,3 +6,4 @@ export { Pinterest } from './Pinterest';
 export { Instagram } from './Instagram';
 export { Youtube } from './Youtube';
 export { Twitter } from './Twitter';
+export { Close } from './Close';

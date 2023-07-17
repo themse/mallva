@@ -2,7 +2,7 @@
 
 import { Field } from 'react-final-form';
 
-import { TextInput } from 'components/TextInput';
+import { TextInput, Icon } from 'components';
 
 type Props = {
   name: string;
@@ -29,7 +29,7 @@ const FormInput = ({
     <Field
       name={name}
       render={({ input, meta }): JSX.Element => (
-        <div>
+        <div className="flex flex-col gap-1">
           <TextInput
             type={type}
             label={label}
@@ -40,7 +40,10 @@ const FormInput = ({
             {...input}
           />
           {!hideError && meta.touched && meta.error && (
-            <span>{meta.error}</span>
+            <span className="text-sm text-red-600 flex gap-1">
+              <Icon.Close />
+              {meta.error}
+            </span>
           )}
         </div>
       )}

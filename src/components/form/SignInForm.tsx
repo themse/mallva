@@ -2,6 +2,7 @@
 
 import { Form, FormProps } from 'react-final-form';
 import * as Yup from 'yup';
+import { useRouter } from 'next/navigation';
 
 import { Asterisk, CustomLink } from 'components';
 import { FormInput } from 'components/form';
@@ -12,12 +13,16 @@ type FormValues = {
 };
 
 const SignInForm = () => {
+  const router = useRouter();
+
   const onSubmit = async (
     { email, password }: FormValues,
-    formApi: FormProps<FormValues>['form']
+    _formApi: FormProps<FormValues>['form']
   ) => {
     // TODO sign in logic
     console.log({ email, password });
+
+    router.push('/admin');
   };
 
   const getValidationRules = async ({ email, password }: FormValues) => {

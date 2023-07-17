@@ -1,34 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mallva
+
+Mallva is a Starbucks demo project showcasing a web application with several pages. The project utilizes popular technologies such as React.js, TypeScript, Next.js, Prisma, Vercel, PostgreSQL, and NextAuth for authentication.
+
+## Pages
+
+### `https://mallva.vercel.app/`
+
+The root page of the application. This page serves as the landing page for Mallva and provides an overview of the Starbucks demo project.
+
+### `https://mallva.vercel.app/sign-in` (TODO still in progress)
+
+The sign-in page allows users to authenticate themselves to access the admin area. It employs NextAuth for authentication purposes, ensuring secure and seamless user login experiences.
+
+### `https://mallva.vercel.app/admin` (TODO still in progress)
+
+The admin page is the central hub for managing various aspects of the Starbucks demo project. It provides an interface for administrators to perform administrative tasks, such as managing products, user accounts, and other related functionalities.
 
 ## Getting Started
 
-First, run the development server:
+Run the project using the following steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- Rename file with environment variables and fill necessary one
+
+```sh
+cp .env.sample .env
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Install all dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+pnpm i
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Start the server
 
-## Learn More
+```sh
+pnpm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+- Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **React.js:** A popular JavaScript library for building user interfaces.
+- **TypeScript:** A typed superset of JavaScript that enhances code maintainability and scalability.
+- **Next.js:** A React framework that enables server-side rendering, static site generation, and other optimizations for efficient web development.
+- **Prisma:** An open-source database toolkit that simplifies database access and manipulation, providing an intuitive and type-safe interface.
+- **Vercel:** A cloud platform for deploying and hosting static websites, providing seamless integration with Next.js.
+- **PostgreSQL:** A powerful open-source relational database management system used to store and manage data for the Mallva project.
+- **NextAuth:** A flexible authentication library for Next.js applications that supports various authentication providers, including social logins, OAuth, and password-based authentication.

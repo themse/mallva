@@ -1,32 +1,49 @@
+'use client';
+
 import Image from 'next/image';
+import clsx from 'clsx';
 
 import { CustomLink as CtaLink } from 'components';
+import {
+  FeaturedBanner as FeaturedBannerEntity,
+  FeaturedBannerOrder,
+} from 'services/entities';
 
-export const FeaturedBanner = () => {
+type Props = {
+  banner: FeaturedBannerEntity;
+};
+
+export const FeaturedBanner = ({ banner }: Props) => {
+  const { title, description, image, bgColor, order, ctaBtnLabel } = banner;
+
+  const onCtaClick = () => {
+    console.log('cta is clicked');
+  };
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-1">
       <div className="relative">
         <div className="absolute inset-0">
           <Image
-            src="/banners/1.jpg"
-            alt="Order now"
+            src={image.path}
+            alt={image.title}
             layout="fill"
             objectFit="cover"
           />
         </div>
       </div>
 
-      <div className="bg-green-950 min-h-[245px] md:min-h-[420px] px-12 py-8 flex flex-col justify-center items-center gap-6 text-white text-center">
-        <h2 className="text-2xl font-semibold">
-          Enjoy summer savings with DashPass
-        </h2>
-        <p className="text-xl leading-8">
-          Now is a great time to save with DashPass. Enjoy $10 off Starbucks
-          orders of $20+ on DoorDash. Offer valid 7/13-7/19 from 12 p.m. – 3
-          p.m. only. Max discount of $10.*
-        </p>
-        <CtaLink size="medium" variant="ctaBtnLight">
-          Order now
+      <div
+        style={{ backgroundColor: bgColor }}
+        className={clsx(
+          'min-h-[245px] md:min-h-[420px] px-12 py-8 flex flex-col justify-center items-center gap-6 text-white text-center',
+          order === FeaturedBannerOrder.INFO_FIRST && 'order-first'
+        )}
+      >
+        <h2 className="text-2xl font-semibold">{title}</h2>
+        <p className="text-xl leading-8">{description}</p>
+        <CtaLink size="medium" variant="ctaBtnLight" onClick={onCtaClick}>
+          {ctaBtnLabel}
         </CtaLink>
       </div>
     </div>

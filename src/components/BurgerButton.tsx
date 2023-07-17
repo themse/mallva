@@ -1,9 +1,10 @@
 'use client';
 
+import { ComponentPropsWithoutRef } from 'react';
 import clsx from 'clsx';
 import { mergeClsx } from 'utils/helpers';
 
-type Props = {
+type Props = ComponentPropsWithoutRef<'button'> & {
   isOpen: boolean;
   toggleMenu: () => void;
   className?: string;
@@ -12,9 +13,15 @@ type Props = {
 const burgerLineStyle =
   'block absolute w-[20px] h-[2px] bg-current transform transition duration-500 ease-in-out';
 
-export const BurgerButton = ({ className, isOpen, toggleMenu }: Props) => {
+export const BurgerButton = ({
+  className,
+  isOpen,
+  toggleMenu,
+  ...props
+}: Props) => {
   return (
     <button
+      {...props}
       type="button"
       className={mergeClsx(
         'text-gray-500 w-[36px] h-[36px] relative focus:outline-none rounded-full hover:bg-gray-100',

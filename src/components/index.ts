@@ -8,6 +8,7 @@ export { Separator } from './Separator';
 export { InfoLinks } from './InfoLinks';
 export { SocialIcons } from './SocialIcons';
 export { TechnicalLinks } from './TechnicalLinks';
+export { FeaturedBanner } from './FeaturedBanner';
 
 export { Navbar, SidebarNav } from './Navbar';
 export { MainMenu } from './MainMenu';

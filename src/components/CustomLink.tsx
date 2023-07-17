@@ -8,6 +8,10 @@ const linkVariants = {
   navLink: 'font-bold uppercase hover:text-green-700',
   sidebarLink: 'font-normal',
   infoLink: 'text-black/50 hover:text-black',
+  ctaBtnLight:
+    'font-semibold border border-white text-white rounded-3xl px-4 py-2 hover:bg-black/20',
+  ctaBtnDark:
+    'font-semibold border border-green-900 text-green-900 rounded-3xl px-4 py-2 hover:bg-gray-30',
   btnLight:
     'font-semibold border border-black rounded-3xl px-4 py-2 hover:bg-gray-300',
   btnDark:

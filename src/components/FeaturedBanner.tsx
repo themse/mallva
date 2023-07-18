@@ -25,10 +25,10 @@ const FeaturedBanner = ({ banner }: Props) => {
       <div className="relative">
         <div className="absolute inset-0">
           <Image
+            fill
             src={image.path}
             alt={image.title}
-            layout="fill"
-            objectFit="cover"
+            className="object-cover w-auto h-auto"
           />
         </div>
       </div>

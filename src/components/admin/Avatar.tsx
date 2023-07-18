@@ -5,9 +5,8 @@ export const Avatar = () => {
     <div className="relative w-10 h-10">
       <div className="absolute inset-0">
         <Image
-          layout="fill"
-          objectFit="cover"
-          className="rounded-full"
+          fill
+          className="rounded-full object-cover w-auto h-auto"
           src="/avatar.jpeg"
           alt="User"
         />

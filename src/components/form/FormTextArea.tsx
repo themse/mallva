@@ -2,11 +2,10 @@
 
 import { Field } from 'react-final-form';
 
-import { TextInput, Icon, FormControl } from 'components';
+import { TextArea, FormControl } from 'components';
 
 type Props = {
   name: string;
-  type: string;
   label?: string;
   defaultValue?: string;
   placeholder?: string;
@@ -15,9 +14,8 @@ type Props = {
   required?: boolean;
 };
 
-const FormInput = ({
+const FormTextArea = ({
   name,
-  type,
   label,
   defaultValue,
   className,
@@ -33,8 +31,7 @@ const FormInput = ({
 
         return (
           <FormControl errorMessage={meta.error} hideError={!hasError}>
-            <TextInput
-              type={type}
+            <TextArea
               label={label}
               defaultValue={defaultValue}
               className={className}
@@ -49,4 +46,4 @@ const FormInput = ({
   );
 };
 
-export default FormInput;
+export default FormTextArea;

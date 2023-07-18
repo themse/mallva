@@ -2,43 +2,35 @@
 
 import { Field } from 'react-final-form';
 
-import { TextInput, Icon, FormControl } from 'components';
+import { Checkbox, FormControl } from 'components';
 
 type Props = {
   name: string;
-  type: string;
-  label?: string;
-  defaultValue?: string;
-  placeholder?: string;
+  label: string;
   className?: string;
   hideError?: boolean;
   required?: boolean;
 };
 
-const FormInput = ({
+const FormCheckbox = ({
   name,
-  type,
   label,
-  defaultValue,
   className,
-  placeholder,
   required = false,
   hideError = false,
 }: Props) => {
   return (
     <Field
+      type="checkbox"
       name={name}
       render={({ input, meta }) => {
         const hasError = !hideError && meta.touched && meta.error;
 
         return (
           <FormControl errorMessage={meta.error} hideError={!hasError}>
-            <TextInput
-              type={type}
-              label={label}
-              defaultValue={defaultValue}
+            <Checkbox
               className={className}
-              placeholder={placeholder}
+              label={label}
               required={required}
               {...input}
             />
@@ -49,4 +41,4 @@ const FormInput = ({
   );
 };
 
-export default FormInput;
+export default FormCheckbox;

@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 
 import { Asterisk, CustomLink } from 'components';
 import { FormInput } from 'components/form';
+import { validateForm } from 'utils/helpers';
 
 type FormValues = {
   email: string;
@@ -25,7 +26,7 @@ const SignInForm = () => {
     router.push('/admin');
   };
 
-  const getValidationRules = async ({ email, password }: FormValues) => {
+  const getValidationRules = async (values: FormValues) => {
     const schema = Yup.object().shape({
       email: Yup.string()
         .required('Email is required')
@@ -35,22 +36,11 @@ const SignInForm = () => {
         .min(8, 'Password must be at least 8 characters long'),
     });
 
-    try {
-      await schema.validate({ email, password }, { abortEarly: false });
-
-      return {};
-    } catch (error) {
-      // @ts-ignore
-      return error.inner.reduce((acc, err) => {
-        acc[err.path] = err.message;
-
-        return acc;
-      }, {});
-    }
+    return validateForm(schema, values);
   };
 
   return (
-    <div className="sign-in rounded-xl p-8 w-1/2">
+    <div className="sign-in rounded-xl p-8 w-[300px] sm:w-[500px]">
       <Form<FormValues>
         onSubmit={onSubmit}
         validate={getValidationRules}

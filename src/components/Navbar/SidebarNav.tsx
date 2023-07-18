@@ -28,7 +28,7 @@ const SidebarNav = () => {
         <Separator />
 
         <div className="flex gap-4 whitespace-nowrap">
-          <AuthButton variant="btnLight" size="small">
+          <AuthButton variant="btnLight" size="small" href="/sign-in">
             Sign in
           </AuthButton>
           <AuthButton variant="btnDark" size="small">

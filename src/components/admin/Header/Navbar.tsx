@@ -21,6 +21,12 @@ export const Navbar = ({ className }: Props) => {
         Dashboard
       </NextLink>
       <NextLink
+        href="/admin/featured-banners"
+        className="block text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2"
+      >
+        Featured Banners
+      </NextLink>
+      <NextLink
         href="/"
         className="block text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2"
       >

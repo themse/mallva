@@ -26,4 +26,5 @@ export { TextInput } from './TextInput';
 export { TextArea } from './TextArea';
 export { Checkbox } from './Checkbox';
 export { FormControl } from './FormControl';
+export { ColorPicker } from './ColorPicker';
 export { Asterisk } from './Asterisk';

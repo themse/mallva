@@ -1,14 +1,12 @@
-import { Image } from "./Image";
-
 export enum FeaturedBannerOrder {
     INFO_FIRST, BANNER_FIRST,
 }
 
 export interface FeaturedBanner {
-    id: string;
+    id?: string;
     title: string;
     description: string;
-    image: Image;
+    image: string;
     order: FeaturedBannerOrder;
     bgColor: string;
     ctaBtnLabel: string;

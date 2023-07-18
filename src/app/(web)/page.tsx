@@ -15,11 +15,7 @@ const Home = () => {
                 orders of $20+ on DoorDash. Offer valid 7/13-7/19 from 12 p.m. – 3
                 p.m. only. Max discount of $10.*
               `,
-              image: {
-                id: '1',
-                path: '/banners/1.jpg',
-                title: 'Order now',
-              },
+              image: '/banners/1.jpg',
               bgColor: '#052E16',
               order: FeaturedBannerOrder.BANNER_FIRST,
               position: 0,

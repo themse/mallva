@@ -14,7 +14,8 @@ type Props = {
 };
 
 const FeaturedBanner = ({ banner }: Props) => {
-  const { title, description, image, bgColor, order, ctaBtnLabel } = banner;
+  const { title, description, image, bgColor, order, ctaBtnLabel, darkMode } =
+    banner;
 
   const onCtaClick = () => {
     console.log('cta is clicked');
@@ -26,8 +27,8 @@ const FeaturedBanner = ({ banner }: Props) => {
         <div className="absolute inset-0">
           <Image
             fill
-            src={image.path}
-            alt={image.title}
+            src={image}
+            alt={title}
             className="object-cover w-auto h-auto"
           />
         </div>
@@ -36,13 +37,19 @@ const FeaturedBanner = ({ banner }: Props) => {
       <div
         style={{ backgroundColor: bgColor }}
         className={clsx(
-          'min-h-[245px] md:min-h-[420px] px-12 py-8 flex flex-col justify-center items-center gap-6 text-white text-center',
+          'min-h-[245px] md:min-h-[420px] px-12 py-8 flex flex-col justify-center items-center gap-6 text-center',
+          darkMode && 'text-green-900',
+          !darkMode && 'text-white',
           order === FeaturedBannerOrder.INFO_FIRST && 'order-first'
         )}
       >
         <h2 className="text-2xl font-semibold">{title}</h2>
         <p className="text-xl leading-8">{description}</p>
-        <CtaLink size="medium" variant="ctaBtnLight" onClick={onCtaClick}>
+        <CtaLink
+          size="medium"
+          variant={darkMode ? 'ctaBtnDark' : 'ctaBtnLight'}
+          onClick={onCtaClick}
+        >
           {ctaBtnLabel}
         </CtaLink>
       </div>

@@ -4,7 +4,7 @@ import { PropsWithChildren } from 'react';
 import { Header, Footer } from 'components';
 
 export const metadata: Metadata = {
-  title: 'Mallva - Join now',
+  title: 'SB-demo - Join now',
 };
 
 const AuthLayout = ({ children }: PropsWithChildren) => {

@@ -7,9 +7,9 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url = env("MALLVA_DB_PRISMA_URL") // uses connection pooling
-  directUrl = env("MALLVA_DB_URL_NON_POOLING") // uses a direct connection
-  shadowDatabaseUrl = env("MALLVA_DB_URL_NON_POOLING") // used for migrations
+  url = env("SB_DEMO_DB_PRISMA_URL") // uses connection pooling
+  directUrl = env("SB_DEMO_DB_URL_NON_POOLING") // uses a direct connection
+  shadowDatabaseUrl = env("SB_DEMO_DB_URL_NON_POOLING") // used for migrations
 }
 
 model FeaturedBanner {

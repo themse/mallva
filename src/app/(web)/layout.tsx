@@ -5,7 +5,7 @@ import { Header, Footer, SidebarNav } from 'components';
 import { SidebarProvider } from 'context';
 
 export const metadata: Metadata = {
-  title: 'Mallva - Starbucks Home Page',
+  title: 'SB-demo - Starbucks Home Page',
 };
 
 const WebLayout = ({ children }: PropsWithChildren) => {

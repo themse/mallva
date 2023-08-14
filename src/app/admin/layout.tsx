@@ -4,7 +4,7 @@ import { PropsWithChildren } from 'react';
 import { Header } from 'components/admin';
 
 export const metadata: Metadata = {
-  title: 'Mallva - Starbucks Admin Page',
+  title: 'SB-demo - Starbucks Admin Page',
 };
 
 const AdminLayout = ({ children }: PropsWithChildren) => {

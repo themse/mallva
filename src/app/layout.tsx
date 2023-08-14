@@ -4,7 +4,7 @@ import { PropsWithChildren } from 'react';
 import 'styles/global.scss';
 
 export const metadata: Metadata = {
-  title: 'Mallva - Starbucks Demo Page',
+  title: 'SB-demo - Starbucks Demo Page',
   description: 'Starbucks Demo',
 };
 
